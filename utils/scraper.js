@@ -1,7 +1,9 @@
 const puppeteer = require("puppeteer");
 
 const scrapedEmote = async (emote) => {
+  // what emote the user inputs
   console.log("Emote searched for is: ", emote);
+
   const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
 

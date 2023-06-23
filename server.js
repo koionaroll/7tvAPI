@@ -5,24 +5,14 @@ const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT;
 
-// middleware parses request body as JSON, Need this for access to req.body for posts
-app.use(express.json());
-app.use(express.static("public"));
 app.use(cors());
-
-app.get(`/`, (req, res) => {
-  res.send("hello");
-});
 
 app.listen(port, () => {
   console.log(`Express listening on port ${port}`);
 });
 
-//-------------
 
 const scraper = require("./utils/scraper");
-
-app.set("view engine", "pug");
 
 app.get("/:emote", (req, res) => {
   const emote = req.params.emote;
