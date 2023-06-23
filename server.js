@@ -11,7 +11,6 @@ app.listen(port, () => {
   console.log(`Express listening on port ${port}`);
 });
 
-
 const scraper = require("./utils/scraper");
 
 app.get("/:emote", (req, res) => {
