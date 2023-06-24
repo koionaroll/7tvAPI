@@ -18,7 +18,7 @@ app.get("/:emote", (req, res) => {
   const emoteOut = new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
       reject("Scraping timed out");
-    }, 3000); // Adjust the timeout duration as per your requirement (in milliseconds)
+    }, 2000); // Adjust the timeout duration as per your requirement (in milliseconds)
 
     scraper
       .scrapedEmote(emoteIn)
